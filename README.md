@@ -4,19 +4,19 @@ A complete REST API for user management built with Node.js, Express.js, and MySQ
 
 ## Features
 
-- ✅ Create, Read, Update, Delete (CRUD) operations for users
-- ✅ Input validation and error handling
-- ✅ MySQL database integration
-- ✅ RESTful API design
-- ✅ Security middleware (Helmet, CORS)
-- ✅ Request logging
-- ✅ Clean folder structure
-- ✅ Proper error handling
+-  Create, Read, Update, Delete (CRUD) operations for users
+-  Input validation and error handling
+-  MySQL database integration
+-  RESTful API design
+-  Security middleware (Helmet, CORS)
+-  Request logging
+-  Clean folder structure
+-  Proper error handling
 
 ## Prerequisites
 
-- Node.js (v14 or higher)
-- MySQL (v8.0 or higher)
+- Node.js 
+- MySQL 
 - npm or yarn
 
 ## Installation
@@ -255,46 +255,26 @@ user-management-api/
 
 You can test the API using tools like:
 - [Postman](https://www.postman.com/)
-- [Insomnia](https://insomnia.rest/)
-- [cURL](https://curl.se/)
 
-### Example cURL commands:
+
+### Example commands:
 
 ```bash
 # Create a user
-curl -X POST http://localhost:3000/api/users \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John Doe","email":"john@example.com","phone":"+1234567890"}'
+POST http://localhost:3000/api/users 
 
 # Get all users
-curl -X GET http://localhost:3000/api/users
+ GET http://localhost:3000/api/users
 
 # Get user by ID
-curl -X GET http://localhost:3000/api/users/1
+ GET http://localhost:3000/api/users/1
 
 # Update user
-curl -X PUT http://localhost:3000/api/users/1 \
-  -H "Content-Type: application/json" \
-  -d '{"name":"John Smith"}'
+ PUT http://localhost:3000/api/users/1 
 
 # Delete user
-curl -X DELETE http://localhost:3000/api/users/1
-```
+ DELETE http://localhost:3000/api/users/1
 
-## Health Check
-
-Check if the server is running:
-```bash
-curl -X GET http://localhost:3000/health
-```
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## License
 

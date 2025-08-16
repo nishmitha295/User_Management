@@ -1,4 +1,4 @@
-const User = require('../model/userModel');
+const User = require('../models/userModel');
 
 class UserService {
   async createUser(userData) {
@@ -43,7 +43,7 @@ class UserService {
       if (error.name === 'SequelizeUniqueConstraintError') {
         throw new Error('Email already exists');
       }
-      throw new Error(error.message || 'Failed to update user');
+      throw Error;
     }
   }
 

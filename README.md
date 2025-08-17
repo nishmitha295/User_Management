@@ -121,8 +121,25 @@ http://localhost:3000/api/users
 {
   "success": true,
   "message": "Users retrieved successfully",
-  "data": [...],
-  "count": 1
+  "data": [
+    {
+      "id": 1,
+      "name": "Nish",
+      "email": "Nish29@example.com",
+      "phone": "0987654321",
+      "created_at": "2025-08-17T04:57:14.096Z",
+      "updated_at": "2025-08-17T04:57:14.096Z"
+    },
+    {
+      "id": 3,
+      "name": "Midya",
+      "email": "midya@gmail.com",
+      "phone": "9807654327",
+      "created_at": "2025-08-17T05:24:21.000Z",
+      "updated_at": "2025-08-17T05:24:21.000Z"
+    }
+  ],
+  "count": 2
 }
 ```
 
@@ -136,7 +153,16 @@ http://localhost:3000/api/users
 {
   "success": true,
   "message": "User retrieved successfully",
-  "data": { ... }
+  "data":[
+    {
+      "id": 1,
+      "name": "Nish",
+      "email": "Nish29@example.com",
+      "phone": "0987654321",
+      "created_at": "2025-08-17T04:57:14.096Z",
+      "updated_at": "2025-08-17T04:57:14.096Z"
+    }
+  ],
 }
 ```
 
@@ -159,7 +185,14 @@ http://localhost:3000/api/users
 {
   "success": true,
   "message": "User updated successfully",
-  "data": { ... }
+  "data":{
+    "id": 1,
+    "name": "Nishmitha",
+    "email": "Nishmitha@gmail.com",
+    "phone": "0987654321",
+    "created_at": "2025-08-17T04:57:14.096Z",
+    "updated_at": "2025-08-17T04:59:50.033Z"
+  }
 }
 ```
 

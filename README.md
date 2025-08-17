@@ -24,7 +24,7 @@ A complete REST API for user management built with Node.js, Express.js, and MySQ
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd user-management-api
+   cd user-management
    ```
 
 2. **Install dependencies**
@@ -44,7 +44,7 @@ A complete REST API for user management built with Node.js, Express.js, and MySQ
    DB_USER=root
    DB_PASSWORD=your_password
    DB_NAME=user_management
-   DB_PORT=3306
+   DB_PORT=3000
    ```
 
 4. **Set up MySQL database**
@@ -52,14 +52,16 @@ A complete REST API for user management built with Node.js, Express.js, and MySQ
    CREATE DATABASE user_management;
    ```
 
-5. **Start the server**
-   ```bash
-   # Development mode (with auto-restart)
-   npm run dev
+5. Start the Server
 
-   # Production mode
-   npm start
-   ```
+To run the application, you have two options:
+
+# Development mode (with auto-restart)
+npm run dev
+
+# Production mode
+node app.js
+   
 
 ## API Endpoints
 
@@ -74,9 +76,9 @@ http://localhost:3000/api/users
 **Request Body:**
 ```json
 {
-  "name": "John Doe",
-  "email": "john.doe@example.com",
-  "phone": "+1234567890"
+  "name": "Nish",
+  "email": "Nish29@example.com",
+  "phone": "0987654321"
 }
 ```
 
@@ -87,11 +89,11 @@ http://localhost:3000/api/users
   "message": "User created successfully",
   "data": {
     "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "phone": "+1234567890",
-    "created_at": "2024-01-01T00:00:00.000Z",
-    "updated_at": "2024-01-01T00:00:00.000Z"
+    "name": "Nish",
+    "email": "Nish29@example.com",
+    "phone": "0987654321",
+    "created_at": "2025-08-17T04:57:14.096Z",
+    "updated_at": "2025-08-17T04:57:14.096Z"
   }
 }
 ```
@@ -107,11 +109,11 @@ http://localhost:3000/api/users
   "data": [
     {
       "id": 1,
-      "name": "John Doe",
-      "email": "john.doe@example.com",
-      "phone": "+1234567890",
-      "created_at": "2024-01-01T00:00:00.000Z",
-      "updated_at": "2024-01-01T00:00:00.000Z"
+      "name": "Nish",
+      "email": "Nish29@example.com",
+      "phone": "0987654321",
+      "created_at": "2025-08-17T04:57:14.096Z",
+      "updated_at": "2025-08-17T04:57:14.096Z"
     }
   ],
   "count": 1
@@ -128,11 +130,11 @@ http://localhost:3000/api/users
   "message": "User retrieved successfully",
   "data": {
     "id": 1,
-    "name": "John Doe",
-    "email": "john.doe@example.com",
-    "phone": "+1234567890",
-    "created_at": "2024-01-01T00:00:00.000Z",
-    "updated_at": "2024-01-01T00:00:00.000Z"
+    "name": "Nish",
+    "email": "Nish29@example.com",
+    "phone": "0987654321",
+    "created_at": "2025-08-17T04:57:14.096Z",
+    "updated_at": "2025-08-17T04:57:14.096Z"
   }
 }
 ```
@@ -143,8 +145,8 @@ http://localhost:3000/api/users
 **Request Body:**
 ```json
 {
-  "name": "John Smith",
-  "email": "john.smith@example.com"
+  "name": "Nishmitha",
+  "email": "Nishmitha@gmail.com"
 }
 ```
 
@@ -155,11 +157,11 @@ http://localhost:3000/api/users
   "message": "User updated successfully",
   "data": {
     "id": 1,
-    "name": "John Smith",
-    "email": "john.smith@example.com",
-    "phone": "+1234567890",
-    "created_at": "2024-01-01T00:00:00.000Z",
-    "updated_at": "2024-01-01T00:00:00.000Z"
+    "name": "Nishmitha",
+    "email": "Nishmitha@gmail.com",
+    "phone": "0987654321",
+    "created_at": "2025-08-17T04:57:14.096Z",
+    "updated_at": "2025-08-17T04:59:50.033Z"
   }
 }
 ```
@@ -235,7 +237,7 @@ http://localhost:3000/api/users
 ```
 user-management-api/
 ├── config/
-│   └── database.js          # Database configuration
+│   └── db.js                # Database configuration
 ├── controllers/
 │   └── userController.js    # Request handlers
 ├── middleware/
@@ -247,8 +249,8 @@ user-management-api/
 │   └── userService.js       # Business logic
 ├── .env                     # Environment variables
 ├── package.json             # Dependencies
-├── README.md               # Documentation
-└── server.js               # Main application file
+├── README.md                # Documentation
+└── app.js                   # Main application file
 ```
 
 ## Testing the API
